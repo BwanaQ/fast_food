@@ -42,7 +42,7 @@ $ source env/bin/activate
 (env)$ pip install -r requirements.txt
 ```
 
-5. rename .envcp to .env then run this command
+5. rename .env copy to .env, add all those fields with your correct values, save it then run this command
 
 ```
 (env) $ source .env
@@ -61,7 +61,7 @@ to deploy to heroku simply create a project and attach your git hub repository
 ## Built With
 
 - [Django](https://www.djangoproject.com/) - The web framework used
-- [Bootstrap](https://getbootstrap.com/) - Frontend for the monolithic app
+- [Django Rest framework](https://getbootstrap.com/) - Frontend for the monolithic app
 
 ## Authors
 
@@ -76,5 +76,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 - Thanks to [Toptal](https://www.toptal.com/developers/gitignore/api/django) for a beautiful .gitignore file
-- Thanks to [Firchow](http://circle.firchow.net/) for the pure css percentage circle
-- Inspiration - My Technical Mentor Kelvin Onkundi and The Olympians Team MC38
+- Inspiration - Our Technical Mentor Kelvin Onkundi and The Olympians Team MC38
