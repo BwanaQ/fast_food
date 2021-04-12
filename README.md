@@ -61,7 +61,7 @@ to deploy to heroku simply create a project and attach your git hub repository
 ## Built With
 
 - [Django](https://www.djangoproject.com/) - The web framework used
-- [Django Rest framework](https://getbootstrap.com/) - Frontend for the monolithic app
+- [Django Rest framework](https://www.django-rest-framework.org/) - For the API Endpoints.
 
 ## Authors
 
