@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # Local apps
     'deli_api',
+    'dish',
 ]
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
