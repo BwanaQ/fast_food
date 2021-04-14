@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
 
     # Local apps
-    'deli_api',
     'dish',
 ]
 CORS_ALLOWED_ORIGINS = [

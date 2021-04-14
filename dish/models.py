@@ -29,8 +29,6 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(
         upload_to='capstone_uploads/', blank=True, null=True)
-    thumbnail = models.ImageField(
-        upload_to='capstone_uploads/', blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -47,24 +45,3 @@ class Dish(models.Model):
         if self.image:
             return self.image.url
         return ''
-
-    def get_thumbnail(self):
-        if self.thumbnail:
-            return self.thumbnail.url
-        else:
-            if self.image:
-                self.thumbnail = self.make_thumbnail(self.image)
-                self.save()
-                return self.thumbnail.url
-            else:
-                return ''
-
-    def make_thumbnail(self, Image, size=(300, 200)):
-        img = Image.open(image)
-        img.convert('RGB')
-        img.thumbnail(size)
-        thumb_io = BytesIO()
-        img.save(thumb_io, 'JPEG', quality=85)
-        thumbnail = File(thumb_io, name=image.name)
-
-        return thumbnail
