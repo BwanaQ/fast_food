@@ -1,20 +1,11 @@
-from django.contrib.auth.models import User
-from .serializers import RegisterSerializer
-from rest_framework import generics, permissions,viewsets
-from .serializers import LoginSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
+#  to be removed
+class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
 
-
-class RegisterView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    # permission_classes = (AllowAny,)
-    serializer_class = RegisterSerializer
-
-class LoginView(viewsets.ModelViewSet):
-
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = LoginSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        content = {'message': 'Hello, World!'}
+        return Response(content)
