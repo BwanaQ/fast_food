@@ -1,7 +1,0 @@
-export SECRET_KEY='django secret key'
-export CLOUD_NAME='cloudinary cloud name'
-export API_KEY='cloudinary api key'
-export API_SECRET='cloudinary api secret'
-export NAME='postges db name'
-export USER='postgres db user'
-export PASSWORD='postgres password'
