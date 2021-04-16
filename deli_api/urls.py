@@ -1,9 +1,8 @@
 from django.urls import path
-from  . import views
+from . import views
 
 
-urlpatterns = [  
+urlpatterns = [
     # to be removed
-    path('hello/', views.HelloView.as_view(), name='hello'),
+    path('', views.HelloView.as_view(), name='hello'),
 ]
-
